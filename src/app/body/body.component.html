@@ -1,0 +1,17 @@
+<form [formGroup]="formulario" (ngSubmit)="Crear()">
+    
+    <ul>
+        <li *ngFor="let item of lista">{{item}}</li>
+    </ul>
+    
+    <ul>
+        <li>
+            <label for="nombre">nombre</label>
+            <input formControlName="nombre" type="text" >
+        </li>
+        <li>
+            <button type="submit" >Crear</button>
+            <button type="button" (click)="Eliminar()">Eliminar</button>
+        </li>
+    </ul>
+</form>
